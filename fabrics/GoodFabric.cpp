@@ -1,6 +1,7 @@
 #include "GoodFabric.h"
 
-GoodFabric::GoodFabric()
+GoodFabric::GoodFabric(QWidget *parent):
+    UnitFabric(parent)
 {
 
 }
@@ -9,13 +10,10 @@ Unit* GoodFabric::create_unit(Object_ID ID) {
     Unit* x;
     switch (ID) {
     case Warrior_ID:
-        x = new HumanWarrior();
+        x = new HumanWarrior(parent);
         break;
     case Archer_ID:
-        x = new ElfArcher();
-        break;
-    case Cavalry_ID:
-        x = new GoodCavalry();
+        x = new ElfArcher(parent);
         break;
     default:
         break;

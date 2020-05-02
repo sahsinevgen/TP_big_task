@@ -6,25 +6,33 @@
 class Unit: public Object
 {
 public:
-    Unit(QString path_to_image, QString type, int max_health, int speed, int damage, int range);
-    bool is_dead();
+    Unit();
+    Unit(QString path_to_image, QString type, int max_health, int speed, int damage, int range, int attack_cooldown, QWidget *parent = 0);
+    virtual bool is_dead();
+    bool is_destroyed();
     bool can_attack(Unit* target);
-    void attack(Unit* target);
-    void move(QPair<double, double> direction);
+    virtual void attack(Unit* target);
+    void move(Point direction);
+    virtual void do_action();
+    virtual Unit* get_target(Unit* another = nullptr);
     bool ready();
-    void change_target(int target_id);
-    int get_target_id();
-    bool has_target();
-    void get_damage(int damage);
-private:
+    virtual void change_target(Unit* target);
+    virtual void change_target(Point target_pos);
+    virtual void change_target();
+
+    void damaged(int damage);
+    bool has_target;
+protected:
+    Unit* target;
+    Point target_pos;
+//private:
     int health;
     int max_health;
     int speed;
     int damage;
     int range;
     int time_to_action;
-    int target_id;
-    //bool have
+    int attack_cooldown;
 };
 
 #endif // UNIT_H

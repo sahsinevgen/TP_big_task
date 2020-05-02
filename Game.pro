@@ -38,9 +38,10 @@ SOURCES += \
     fabrics/ObjectFabric.cpp \
     fabrics/GoodFabric.cpp \
     fabrics/EvilFabric.cpp \
-    objects/units/Cavalry.cpp \
-    objects/units/GoodCavalry.cpp \
-    objects/units/EvilCavalry.cpp
+    objects/Point.cpp \
+    objects/units/Arrow.cpp \
+    objects/units/EconomicArmy.cpp \
+    objects/units/Army.cpp
 
 HEADERS += \
     objects/units/Archer.h \
@@ -56,9 +57,10 @@ HEADERS += \
     fabrics/ObjectFabric.h \
     fabrics/GoodFabric.h \
     fabrics/EvilFabric.h \
-    objects/units/Cavalry.h \
-    objects/units/GoodCavalry.h \
-    objects/units/EvilCavalry.h
+    objects/Point.h \
+    objects/units/Arrow.h \
+    objects/units/EconomicArmy.h \
+    objects/units/Army.h
 
 FORMS += \
     MainWindow.ui

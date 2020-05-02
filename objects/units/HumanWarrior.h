@@ -7,7 +7,7 @@
 class HumanWarrior: public Warrior
 {
 public:
-    HumanWarrior();
+    HumanWarrior(QWidget *parent = 0);
 };
 
 #endif // HUMANWARRIOR_H

@@ -4,12 +4,11 @@
 #include "UnitFabric.h"
 #include "../objects/units/HumanWarrior.h"
 #include "../objects/units/ElfArcher.h"
-#include "../objects/units/GoodCavalry.h"
 
 class GoodFabric: public UnitFabric
 {
 public:
-    GoodFabric();
+    GoodFabric(QWidget *parent = 0);
     Unit* create_unit(Object_ID ID);
 };
 

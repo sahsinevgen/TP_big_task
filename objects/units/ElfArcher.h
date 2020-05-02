@@ -6,7 +6,7 @@
 class ElfArcher: public Archer
 {
 public:
-    ElfArcher();
+    ElfArcher(QWidget *parent = 0);
 };
 
 #endif // ELFARCHER_H

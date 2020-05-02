@@ -6,7 +6,7 @@
 class SkeletonArcher: public Archer
 {
 public:
-    SkeletonArcher();
+    SkeletonArcher(QWidget *parent = 0);
 };
 
 #endif // SKELETONARCHER_H

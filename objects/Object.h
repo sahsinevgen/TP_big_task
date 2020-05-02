@@ -3,24 +3,37 @@
 
 #include <QString>
 #include <QPair>
-#include <QtMath>
 #include <QDir>
+
+#include <iostream>
+#include <QPixmap>
+#include <QLabel>
+#include "Point.h"
+
+namespace Ui {
+class Object;
+}
 
 class Object
 {
 public:
-    Object(QString path_to_image, QString type);
+    Object();
+    Object(QString path_to_image, QString type, QWidget *parent = 0);
     int get_id();
-    void set_position(QPair<double, double> position);
-    QPair<double, double> get_position();
+    void set_position(Point position);
+    Point get_position();
     QString get_path_to_image();
-    double dist(Object* another);
-private:
+    virtual bool is_destroyed() = 0;
+    virtual ~Object();
+    virtual void draw();
+protected:
     QString path_to_image;
     QString type;
     int id;
-    QPair<double, double> position;
+    Point position;
     static int counter;
+    QWidget *parent;
+    QLabel *label;
 };
 
 #endif // OBJECT_H

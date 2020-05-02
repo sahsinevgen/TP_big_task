@@ -7,7 +7,7 @@
 class UnitFabric: public ObjectFabric
 {
 public:
-    UnitFabric();
+    UnitFabric(QWidget *parent = 0);
     virtual Unit* create_unit(Object_ID ID) = 0;
     Object* create_object(Object_ID ID);
 };

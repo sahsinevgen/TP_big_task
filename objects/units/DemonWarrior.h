@@ -6,7 +6,7 @@
 class DemonWarrior: public Warrior
 {
 public:
-    DemonWarrior();
+    DemonWarrior(QWidget *parent = 0);
 };
 
 #endif // DEMONWARRIOR_H

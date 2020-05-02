@@ -1,6 +1,7 @@
 #include "UnitFabric.h"
 
-UnitFabric::UnitFabric()
+UnitFabric::UnitFabric(QWidget *parent):
+    ObjectFabric(parent)
 {
 
 }

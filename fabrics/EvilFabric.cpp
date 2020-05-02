@@ -1,6 +1,7 @@
 #include "EvilFabric.h"
 
-EvilFabric::EvilFabric()
+EvilFabric::EvilFabric(QWidget *parent):
+    UnitFabric(parent)
 {
 
 }
@@ -9,13 +10,10 @@ Unit* EvilFabric::create_unit(Object_ID ID) {
     Unit* x;
     switch (ID) {
     case Warrior_ID:
-        x = new DemonWarrior();
+        x = new DemonWarrior(parent);
         break;
     case Archer_ID:
-        x = new SkeletonArcher();
-        break;
-    case Cavalry_ID:
-        x = new EvilCavalry();
+        x = new SkeletonArcher(parent);
         break;
     default:
         break;

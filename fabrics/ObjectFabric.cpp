@@ -1,6 +1,6 @@
 #include "ObjectFabric.h"
 
-ObjectFabric::ObjectFabric()
+ObjectFabric::ObjectFabric(QWidget *parent)
 {
-
+    this->parent = parent;
 }
