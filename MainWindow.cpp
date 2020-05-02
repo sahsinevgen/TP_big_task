@@ -89,7 +89,6 @@ void MainWindow::update()
 
 void MainWindow::choose()
 {
-    std::cout << "WOW" << std::endl;
     int id = ui->chooseSpinBox->value();
     if (id == -1)
     {

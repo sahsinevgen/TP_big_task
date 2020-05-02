@@ -16,7 +16,7 @@ void EconomicArmy::do_action()
 
 void EconomicArmy::spawn()
 {
-    if (this->has_target)
+    if (this->has_target || this->is_dead())
     {
         this->tyme_to_spawn = this->spawn_cooldawn;
         return;
